@@ -2,11 +2,10 @@ extends layout
 
 block content
   .parent
-  .body
-    form#input-form(action="/" method="post")
-      label(for="command")  
-        |~DragonScript $&nbsp;
-        input.command(type="text", name="command", autocomplete="off", autofocus)
+  form#input-form(action="/" method="post")
+    label#command.path(for="command")  
+      |~DragonScript/game $&nbsp;
+      input.command(type="text", name="command", autocomplete="off", autofocus)
   script(type="text/javascript", src="/javascripts/text.js")
   script(type="text/javascript", src="/javascripts/logic.js")
   script(type="text/javascript", src="/javascripts/play.js")

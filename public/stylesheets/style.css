@@ -22,7 +22,7 @@ input {
   height: 0.1px;
 }
 
-.intro, .parent, .path, .signupInfo, .body, .log {
+.intro, .error, .parent, .path, .signupInfo, .body, .log {
   margin-left: 30px;
 }
 

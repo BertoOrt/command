@@ -1,7 +1,7 @@
 var help = ["The most commonly used commands are:", "clear", "clear screen", "dragon", "start dragon quest",
           ];
 
-var dragonHelp = ["The most commonly used commands are:", "draw sword", "sign up to play the game!", "clear", "clear screen", "quit", "exit to home page", "login", "log into your game", "logout", "log out of game once logged in", "restart", "resets the game once logged in", "back", "goes back to the last question, down to the first once logged in",
+var dragonHelp = ["The most commonly used commands are:", "draw sword", "sign up to play the game!", "clear", "clear screen", "quit", "exit to home page", "login", "log into your game", "logout", "log out of the game (in game)", "restart", "resets the game (in game)", "back", "goes back to the last question, down to the first (in game)",
         ];
 
 var intro = [

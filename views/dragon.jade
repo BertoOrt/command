@@ -3,7 +3,7 @@ extends layout
 block content
   .parent
     .dragonInput
-      | Welcome to DragonScript, Type help for assistance
+      | Welcome to DragonScript, type help for assistance
       pre.
         &nbsp;                                 /   \       
                                   )      ((   ))     (
@@ -21,11 +21,10 @@ block content
                            l /   V          \ \       V   \ l                 (@)
                            l/               _) )_          \I
                                            `\ /'
-   .body
-     form#input-form(action="/" method="post")
-       label(for="command")  
-         |~DragonScript $&nbsp;
-         input.command(type="text", name="command", autocomplete="off", autofocus)
+  form#input-form.path(action="/" method="post")
+    label(for="command")  
+      |~DragonScript $&nbsp;
+      input#command.command(type="text", name="command", autocomplete="off", autofocus)
   script(type="text/javascript", src="/javascripts/text.js")
   script(type="text/javascript", src="/javascripts/logic.js")
   script(type="text/javascript", src="/javascripts/dragon.js")

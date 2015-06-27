@@ -27,7 +27,8 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
   }
 
   else if (input.value === "quit") {
-
+    window.location.replace("/dragon");
+    e.preventDefault();
   }
 
   else {
@@ -41,3 +42,6 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
   }
 
 })
+
+
+// div.innerHTML = quotes[Math.floor(Math.random()*quotes.length)];

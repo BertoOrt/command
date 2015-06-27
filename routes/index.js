@@ -21,12 +21,21 @@ router.post('/', function (req, res, next) {
 })
 
 router.post('/login', function (req, res, next) {
-  res.redirect('/dragon');
+  res.redirect('/dragon/game');
 })
 
 router.get('/dragon/signup', function (req, res, next) {
   res.render('signup')
 })
+
+router.get('/dragon/login', function (req, res, next) {
+  res.render('login')
+})
+
+router.get('/dragon/game', function (req, res, next) {
+  res.render('play')
+})
+
 
 
 //

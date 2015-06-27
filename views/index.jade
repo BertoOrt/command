@@ -2,12 +2,10 @@ extends layout
 
 block content
   .parent    
-  .body
-    form#input-form(action="/dragon" method="post")
-      label(for="command")  
-        |$&nbsp;
-        input.command(type="text", name="command", autocomplete="off", autofocus)
-    
-    script(type="text/javascript", src="/javascripts/text.js")
-    script(type="text/javascript", src="/javascripts/logic.js")
-    script(type="text/javascript", src="/javascripts/client.js")
+  form#input-form(action="/dragon" method="post")
+    label#command.path(for="command")  
+      |$&nbsp;
+      input.command(type="text", name="command", autocomplete="off", autofocus)
+  script(type="text/javascript", src="/javascripts/text.js")
+  script(type="text/javascript", src="/javascripts/logic.js")
+  script(type="text/javascript", src="/javascripts/client.js")

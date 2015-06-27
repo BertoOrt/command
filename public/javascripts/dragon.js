@@ -31,6 +31,11 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
+  else if (input.value === "login") {
+    window.location.replace("/dragon/login");
+    e.preventDefault();
+  }
+
   else if (input.value === "quit") {
 
   }
