@@ -1,10 +1,14 @@
 extends layout
 
 block content
-  .input 
-    !{input}
+  .parent    
   .body
-    form(action="", method="post")= line
+    form#input-form(action="/dragon" method="post")
+      = line
       label(for="command")  
+        |$&nbsp;
         input.command(type="text", name="command", autocomplete="off", autofocus)
+    
+    script(type="text/javascript", src="/javascripts/text.js")
+    script(type="text/javascript", src="/javascripts/logic.js")
     script(type="text/javascript", src="/javascripts/client.js")

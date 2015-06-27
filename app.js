@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 require('dotenv').load();
 
 var routes = require('./routes/index');
-var dragon = require('./routes/dragon');
+// var dragon = require('./routes/dragon');
 
 var app = express();
 
@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/', dragon);
+// app.use('/', dragon);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
