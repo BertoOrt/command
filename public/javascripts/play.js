@@ -26,11 +26,6 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value === "draw sword") {
-    window.location.replace("/dragon/signup");
-    e.preventDefault();
-  }
-
   else if (input.value === "quit") {
 
   }

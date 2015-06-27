@@ -20,6 +20,14 @@ router.post('/', function (req, res, next) {
   res.redirect('/');
 })
 
+router.post('/login', function (req, res, next) {
+  res.redirect('/dragon');
+})
+
+router.get('/dragon/signup', function (req, res, next) {
+  res.render('signup')
+})
+
 
 //
 // router.post('/', function(req,res,next) {

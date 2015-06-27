@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .parent
+  form#input-form(action="/login" method="post")
+    .append
+      .signupInfo
+    .commandLine
+      label#command.path(for="command")  
+        |~DragonScript/signup $&nbsp;
+        input#command.command(type="text", name="command", autocomplete="off", autofocus)
+    input.button(type="submit" value="")
+  script(type="text/javascript", src="/javascripts/text.js")
+  script(type="text/javascript", src="/javascripts/logic.js")
+  script(type="text/javascript", src="/javascripts/signup.js")

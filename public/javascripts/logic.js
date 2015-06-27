@@ -30,3 +30,7 @@ var parser = function(input){
   });
   return result.join("");
 };
+
+var error = function (input) {
+  
+}
