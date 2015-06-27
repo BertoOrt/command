@@ -33,10 +33,21 @@ var parser = function(input){
 
 var error = function (input) {
   this.errorsArr = [];
-}
+};
 
 error.prototype.validateInput = function (input, label) {
   if (input.trim().length > 15 || input.trim().length < 3) {
     this.errorsArr.push('please make sure your ' + label + ' is from 3-15 characters long')
   }
-}
+};
+
+var cookieParser = function (cookie) {
+  var object = {};
+  var color = cookie.split(';');
+  color.forEach(function (value) {
+    var clean = value.split('=');
+    object[clean[0].trim()] = object[clean[0].trim()] || "";
+    object[clean[0].trim()] = clean[1];
+  });
+  return object;
+};

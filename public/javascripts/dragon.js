@@ -31,13 +31,22 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
+  else if (input.value === "play") {
+    window.location.replace("/dragon/game");
+    e.preventDefault();
+  }
+
   else if (input.value === "login") {
     window.location.replace("/dragon/login");
     e.preventDefault();
   }
 
   else if (input.value === "quit") {
+    window.location.replace("/");
+    e.preventDefault();
+  }
 
+  else if (input.value === "logout") {
   }
 
   else {

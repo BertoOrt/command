@@ -21,7 +21,9 @@ block content
                            l /   V          \ \       V   \ l                 (@)
                            l/               _) )_          \I
                                            `\ /'
-  form#input-form.path(action="/" method="post")
+      if loggedOut
+        !{loggedOut}
+  form#input-form.path(action="/dragon" method="post")
     label(for="command")  
       |~DragonScript $&nbsp;
       input#command.command(type="text", name="command", autocomplete="off", autofocus)

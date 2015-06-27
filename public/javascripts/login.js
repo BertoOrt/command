@@ -110,7 +110,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
       pre.className = "question";
       pre.innerHTML = "\n" + "Excellent. Press Enter to start game or clear to reset";
       input.value = "";
-      input.type = "password";
+      input.type = "text";
       place++;
       e.preventDefault();
     }

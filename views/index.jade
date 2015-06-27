@@ -2,7 +2,7 @@ extends layout
 
 block content
   .parent    
-  form#input-form(action="/dragon" method="post")
+  form#input-form(action="/" method="post")
     label#command.path(for="command")  
       |$&nbsp;
       input.command(type="text", name="command", autocomplete="off", autofocus)

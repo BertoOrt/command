@@ -1,3 +1,7 @@
+// if (cookieParser(document.cookie).name === undefined) {
+//   window.location.replace("/dragon");
+// }
+
 var input = document.querySelector('input.command');
 
 input.addEventListener('blur',function(){
@@ -29,6 +33,10 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
   else if (input.value === "quit") {
     window.location.replace("/dragon");
     e.preventDefault();
+  }
+
+  else if (input.value === "logout") {
+    
   }
 
   else {

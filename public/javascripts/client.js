@@ -29,7 +29,8 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
   }
 
   else if (input.value === "dragon") {
-
+    window.location.replace("/dragon");
+    e.preventDefault();
   }
 
   else {

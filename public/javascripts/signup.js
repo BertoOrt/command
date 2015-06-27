@@ -1,19 +1,37 @@
-var input = document.querySelector('input.command');
-var container = document.querySelector('.parent');
-var div = document.createElement('div');
-var pre = document.createElement('pre');
-div.className = "prompt";
-container.appendChild(div);
-div.appendChild(pre);
-pre.innerHTML = intro[0];
-input.value = "";
-var place = 0;
-var errors = new error;
 
+var input = document.querySelector('input.command');
+var placeHolder = document.querySelector('.invisible');
+var place = Number(placeHolder.innerHTML) || 0;
+var errors = new error;
 
 input.addEventListener('blur',function(){
    this.focus();
 });
+
+if (place === 0) {
+  var container = document.querySelector('.parent');
+  var div = document.createElement('div');
+  var pre = document.createElement('pre');
+  div.className = "prompt";
+  container.appendChild(div);
+  div.appendChild(pre);
+  pre.innerHTML = intro[0];
+  input.value = "";
+}
+else {
+  var container = document.querySelector('.parent');
+  var pre = document.createElement('pre');
+  var pre2 = document.createElement('pre');
+  var div = document.createElement('div');
+  var div2 = document.querySelector('.signupInfo');
+  div.className = "prompt";
+  container.appendChild(div);
+  div.appendChild(pre);
+  div2.appendChild(pre2);
+  pre.innerHTML = intro[1];
+  pre2.className = "question"
+  pre2.innerHTML ="What's your name?";
+}
 
 document.querySelector('#input-form').addEventListener('submit', function (e) {
 

@@ -2,10 +2,12 @@ extends layout
 
 block content
   .parent
-  form#input-form(action="/login" method="post")
+  form#input-form(action="/dragon/login" method="post")
     .append
       .signupInfo
     .error
+      if error
+        !{error}
     .commandLine
       label#command.path(for="command")  
         |~DragonScript/login $&nbsp;
