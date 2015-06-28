@@ -14,9 +14,37 @@ router.get('/dragon', function(req, res, next) {
 });
 
 router.post('/dragon', function (req, res, next) {
-  res.clearCookie('name');
-  res.clearCookie('lives');
-  res.render('dragon', {loggedOut: "You are logged out"});
+  if (req.body.command === "logout") {
+    res.clearCookie('name');
+    res.clearCookie('lives');
+    res.render('dragon', {loggedOut: "You are logged out"});
+  }
+  else if (req.body.command === "restart") {
+    dragonScript.findOne({username: req.cookies.name}, function (err, data) {
+      var level = data.level;
+      dragonScript.update({username: req.cookies.name}, {$set : { level: 0}});
+      res.redirect('/dragon/game');
+    })
+  }
+  else if (req.body.command === "back") {
+    dragonScript.findOne({username: req.cookies.name}, function (err, data) {
+      var level = data.level;
+      dragonScript.update({username: req.cookies.name}, {$set : { level: level > 0 ? --level : level}});
+      res.redirect('/dragon/game');
+    })
+  }
+  else {
+    dragonScript.findOne({username: req.cookies.name}, function (err, data) {
+      var level = data.level;
+      if (level < 4) {
+        dragonScript.update({username: req.cookies.name}, {$set : { level: ++level}});
+        res.redirect('/dragon/game');
+      }
+      else {
+        res.redirect('/dragon')
+      }
+    })
+  }
 })
 
 router.post('/', function (req, res, next) {
@@ -35,7 +63,7 @@ router.post('/dragon/login', function (req, res, next) {
         res.redirect('/dragon/game');
       }
       else {
-      res.render('login', {error: "Incorrect password, try again"})
+        res.render('login', {error: "Incorrect password, try again"})
       }
     }
   });
@@ -66,11 +94,13 @@ router.get('/dragon/login', function (req, res, next) {
 })
 
 router.get('/dragon/game', function (req, res, next) {
-  if (req.cookies.name === undefined) {
+  if (req.cookies.name === undefined || req.cookies.name === undefined) {
     res.render('dragon', {loggedOut: "You are logged out"})
   }
   else {
-    res.render('play');
+    dragonScript.findOne({username: req.cookies.name}, function (err, data) {
+    res.render('play', {level: data.level});
+    })
   }
 })
 

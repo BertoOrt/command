@@ -26,6 +26,20 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
+  else if (input.value === "dragon website") {
+    var container = document.querySelector('.parent');
+    var div = document.createElement('div');
+    var img = document.createElement('img');
+    div.className = "dragonInput";
+    img.src = "/images/dragonSite.png";
+    img.width = "600"
+    img.height = "400"
+    div.appendChild(img);
+    container.appendChild(div);
+    input.value = "";
+    e.preventDefault();
+  }
+
   else if (input.value === "draw sword") {
     window.location.replace("/dragon/signup");
     e.preventDefault();

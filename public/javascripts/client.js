@@ -33,6 +33,37 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
+  else if (input.value === "github") {
+    window.location.replace("http://github.com/bertoort/command");
+    e.preventDefault();
+  }
+
+  else if (input.value.indexOf("theme ") > -1) {
+    var color = input.value.replace('theme ', "");
+    if (color === "white") {
+      input.style.background = color;
+      document.body.style.background = color;
+      document.body.style.color = "black";
+      input.style.color = "black";
+      input.value = "";
+      e.preventDefault();
+    }
+    else if (color === "black") {
+      input.style.background = color;
+      document.body.style.background = color;
+      document.body.style.color = "white";
+      input.style.color = "white";
+      input.value = "";
+      e.preventDefault();
+    }
+    else {
+    input.style.background = color;
+    document.body.style.background = color;
+    input.value = "";
+    e.preventDefault();
+    }
+  }
+
   else {
   var container = document.querySelector('.parent');
   var div = document.createElement('div');

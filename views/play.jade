@@ -1,11 +1,14 @@
 extends layout
 
 block content
+  .message
+    .welcome
   .parent
   form#input-form(action="/dragon" method="post")
     label#command.path(for="command")  
       |~DragonScript/game $&nbsp;
       input.command(type="text", name="command", autocomplete="off", autofocus)
+  p.invisible= level
   script(type="text/javascript", src="/javascripts/text.js")
   script(type="text/javascript", src="/javascripts/logic.js")
   script(type="text/javascript", src="/javascripts/play.js")
