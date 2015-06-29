@@ -1,7 +1,7 @@
-var help = ["The most commonly used commands are:", "clear", "clear screen", "theme [color]", "change background color", "github", "checkout the repository", "dragon", "start dragon quest",
+var help = ["The most commonly used commands are:", "clear", "clear screen", "theme [color]", "change background color", "about", "display information about me!", "github", "checkout the repository", "dragon", "start dragon quest",
           ];
 
-var dragonHelp = ["The most commonly used commands are:", "draw sword", "sign up to play the game!", "clear", "clear screen", "quit", "exit to home page", "login", "log into your game", "play", "jump into the game if already logged in", "logout", "log out of the game", "restart", "resets the game (in game)", "back", "goes back to the last question, down to the first (in game)",
+var dragonHelp = ["The most commonly used commands are:", "draw sword", "sign up to play the game!", "clear", "clear screen", "quit", "exit to home page", "login", "log into your game", "play", "jump into the game if already logged in", "logout", "log out of the game", "delete", "delete your account", "restart", "resets the game (in game)", "back", "goes back to the last question, down to the first (in game)",
         ];
 
 var intro = [
@@ -19,10 +19,10 @@ var quest = [
       ].join('\n'),
        [ "Splendid! I am starting to believe you. Perhaps you can help me with my website. But first, one last test:<br>", "var myObj= {'a': 'b', 'c': ['d', {'e': 'f'}, ['g', 'h']], 'i': {'j': 'k'}}<br>", "console.log(myObj.c[2]['g'])<br>", "What is printed in the console?<br>",
       ].join('\n'),
-       ["So I have this function that I use for my ingredients:<br>", "function push(i,j,k,l) {", "&nbsp;var values = [];", "&nbsp;myBlock: {", "&nbsp;values.push(i);", "&nbsp;values.push(j);", "&nbsp;break myBlock;", "&nbsp;values.push(k);", "&nbsp;}", "&nbsp;values.push(i);", "&nbsp;return values.join(',');", "}<br>", "What is printed when I console.log(push('human tears','human eyes','human toes', 'human hairs'))?<br>",
+       ["So I have this function that I use for my ingredients:<br>", "function push(i,j,k,l) {", "&nbsp;var values = [];", "&nbsp;myBlock: {", "&nbsp;values.push(i);", "&nbsp;values.push(j);", "&nbsp;break myBlock;", "&nbsp;values.push(k);", "&nbsp;}", "&nbsp;values.push(i);", "&nbsp;return values.join(', ');", "}<br>", "What is printed when I console.log(push('salt','human eyes','lavender','lime'))?<br>",
       ].join('\n'),
-      ["You earned the dragon's trust! You later helped him with his cooking website and it looks gorgeous!", "The dragon spares your life and you two become besties and eat delicioius food.<br>", "THE END<br>",  "type dragon website to view",
+      ["You earned the dragon's trust! You later helped him with his cooking website and it looks gorgeous!", "The dragon spares your life and you two become besties and eat delicioius food.<br>",  "type dragon website to view",
       ].join('\n'),
     ];
 
-var quotes = ["Haha, you must be kidding", "We all make mistakes, try again", "Your life is in danger, take this seriously", "you call yourself a programmer?", "That can't be right", "I might be a dragon, but I don't think that's right", "Take your time human, try again"];
+var about = "Hello, my name is Roberto Ortega. I'm a student at Galvanize Full Stack Course<br><br> This is my terminal website. Check out the repository or find me on linkedIn.<br> Play around, type help for the list of commands, and have fun!"

@@ -1,5 +1,36 @@
-
 var input = document.querySelector('input.command');
+var theme = cookieParser(document.cookie).theme;
+var nameInput = document.querySelector('#name');
+var passwordInput = document.querySelector('#password');
+var confirmationInput = document.querySelector('#confirmation');
+
+if (theme === "white") {
+  input.style.background = theme;
+  document.body.style.background = theme;
+  document.body.style.color = "black";
+  input.style.color = "black";
+  input.value = "";
+}
+else if (theme === "hacker") {
+  input.style.background = "black";
+  document.body.style.background = "black";
+  document.body.style.color = "#00FF00";
+  input.style.color = "#00FF00";
+  input.value = "";
+}
+else if (theme === "black") {
+  input.style.background = theme;
+  document.body.style.background = theme;
+  document.body.style.color = "white";
+  input.style.color = "white";
+  input.value = "";
+}
+else {
+  input.style.background = theme;
+  document.body.style.background = theme;
+  input.value = "";
+}
+
 var placeHolder = document.querySelector('.invisible');
 var place = Number(placeHolder.innerHTML) || 0;
 var errors = new error;
@@ -35,7 +66,7 @@ else {
 
 document.querySelector('#input-form').addEventListener('submit', function (e) {
 
-  if (input.value === "clear" && place === 0) {
+  if (input.value.trim() === "clear" && place === 0) {
     var container = document.getElementsByClassName('signup');
     var max = container.length;
     for (var i = 0; i < max; i++) {
@@ -45,12 +76,12 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value === "quit") {
+  else if (input.value.trim() === "quit") {
     window.location.replace("/dragon");
     e.preventDefault();
   }
 
-  else if (input.value === "help" && place === 0) {
+  else if (input.value.trim() === "help" && place === 0) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
@@ -60,7 +91,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value === "a" && place === 0) {
+  else if (input.value.trim() === "a" && place === 0) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
@@ -70,7 +101,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value === "b" && place === 0) {
+  else if (input.value.trim() === "b" && place === 0) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
@@ -80,7 +111,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value === "c" && place === 0) {
+  else if (input.value.trim() === "c" && place === 0) {
     document.querySelector('.prompt').remove();
     var container = document.querySelector('.parent');
     var pre = document.createElement('pre');
@@ -99,7 +130,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value === "clear" && place > 0) {
+  else if (input.value.trim() === "clear" && place > 0) {
     document.querySelector('.signupInfo').remove();
     var container = document.querySelector('.append');
     var div = document.createElement('div');
@@ -142,7 +173,17 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     pre.innerHTML = "\n" + "What's your password?" + "\n" + "\n" + "(enter clear to change name)";
     name.setAttribute('id', 'name');
     name.name = "name";
-    name.value = input.value;
+    name.value = input.value.trim();
+    if (theme) {
+      if (theme === "hacker") {
+        name.style.background = "black";
+        name.style.color = "#00FF00";
+      }
+      else if (theme === "white") {
+        name.style.color = "black";
+      }
+      name.style.background = theme;
+    };
     pre.className = "question";
     input.value = "";
     input.type = "password";
@@ -179,6 +220,16 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
       password.name = "password";
       password.value = input.value;
       password.type = "password";
+      if (theme) {
+        if (theme === "hacker") {
+          password.style.background = "black";
+          password.style.color = "#00FF00";
+        }
+        else if (theme === "white") {
+          password.style.color = "black";
+        }
+        password.style.background = theme;
+      };
       pre.className = "question";
       pre.innerHTML = "\n" + "Please confirm your password.";
       input.value = "";

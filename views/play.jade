@@ -3,11 +3,63 @@ extends layout
 block content
   .message
     .welcome
+  .log
+  if win
+    pre.
+      &nbsp;                                  _____
+      &nbsp;                          _..--'''@   @'''--.._
+      &nbsp;                        .'   @_/-//-\/>/>'/ @  '.
+      &nbsp;                      (  @  /_ // '/----------^-)
+      &nbsp;                      |'._  @     //|###########|
+      &nbsp;                      |~  ''--..@|',|}}}}}}}}}}}|
+      &nbsp;                      |  ~   ~   |/ |###########|
+      &nbsp;                      | ~~  ~   ~|./|{{{{{{{{{{{|
+      &nbsp;                       '._ ~ ~ ~ |,/`````````````
+      &nbsp;                          ''--.~.|/
+      &nbsp;                              (W)
+      &nbsp;                              ||  (.--.)         /===-_---~~~~~~~~~------____
+      &nbsp;                              | \_,|**|,__      |===-~___                _,-'  
+      &nbsp;                 -==\\        `\ ' `--'   ),    `//~\\   ~~~~`---.___.-~~
+      &nbsp;             ______-==|        /`\_. .__/\ \    | |  \\           _-~`
+      &nbsp;       __--~~~  ,-/-==\\      (   | .  |~~~~|   | |   `\        ,'
+      &nbsp;    _-~       /'    |  \\     )__/==0==-\<>/   / /      \      /
+      &nbsp;  .'        /       |   \\      /~\___/~~\/  /' /        \   /'
+      &nbsp; /  ____  /         |    \`\.__/-~~   \  |_/'  /          \/'
+      &nbsp;/-‘~    ~~~~~---__  |     ~-/~         ( )   /'        _--~`
+      &nbsp;                  \_|      /        _) | ;  ),   __--~~
+      &nbsp;                    '~~--_/      _-~/- |/ \   '-~ \             
+      &nbsp;                   {\__--_/}    / \\_>-|)<__\      \
+      &nbsp;                   /'   (_/  _-~  | |__>--<__|      | 
+      &nbsp;                  |   _/) )-~     | |__>--<__|      |   
+      &nbsp;                  / /~ ,_/       / /__>---<__/      |  
+      &nbsp;                 o-o _//        /-~_>---<__-~      / 
+      &nbsp;                 (^(~          /~_>---<__-      _-~              
+      &nbsp;                ,/|           /__>--<__/     _-~                 
+      &nbsp;             ,//('(          |__>--<__|     /                  .----_ 
+      &nbsp;            ( ( '))          |__>--<__|    |                 /' _---_~\
+      &nbsp;         `-)) )) (           |__>--<__|    |               /'  /     ~\`\
+      &nbsp;        ,/,'//( (             \__>--<__\    \            /'  //        ||
+      &nbsp;      ,( ( ((, ))              ~-__>--<_~-_  ~--____---~' _/'/        /'
+      &nbsp;    `~/  )` ) ,/|                 ~-_~>--<_/-__       __-~ _/ 
+      &nbsp;  ._-~//( )/ )) `                    ~~-'_/_/ /~~~~~~~__--~ 
+      &nbsp;   ;'( ')/ ,)(                              ~~~~~~~~~~ 
+      &nbsp;  ' ') '( (/
+      &nbsp;                     _   _                           _ 
+      &nbsp;                    | |_| |__   ___    ___ _ __   __| |
+      &nbsp;                    | __| '_ \ / _ \  / _ \ '_ \ / _` |
+      &nbsp;                    | |_| | | |  __/ |  __/ | | | (_| |
+      &nbsp;                     \__|_| |_|\___|  \___|_| |_|\__,_|
+    br
   .parent
+  if quote
+    .dragonQuotes.parent
+      !{quote}
   form#input-form(action="/dragon" method="post")
     label#command.path(for="command")  
       |~DragonScript/game $&nbsp;
       input.command(type="text", name="command", autocomplete="off", autofocus)
+    input.answer(type="text", name="answer")
+    input.button(type="submit" value="")
   p.invisible= level
   script(type="text/javascript", src="/javascripts/text.js")
   script(type="text/javascript", src="/javascripts/logic.js")

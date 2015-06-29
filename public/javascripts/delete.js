@@ -10,7 +10,7 @@ div.appendChild(pre);
 div2.appendChild(pre2);
 pre2.className = "question"
 pre2.innerHTML ="What's your name?";
-pre.innerHTML = "Welcome back!";
+pre.innerHTML = "Sorry you're leaving us";
 input.value = "";
 var place = 0;
 var errors = new error;
@@ -155,7 +155,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
         password.style.background = theme;
       };
       pre.className = "question";
-      pre.innerHTML = "\n" + "Excellent. Press Enter to start game or clear to reset";
+      pre.innerHTML = "\n" + "All good. Press Enter to delete your account or clear to reset";
       input.value = "";
       input.type = "text";
       place++;

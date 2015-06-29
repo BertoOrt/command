@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .parent
+  form#input-form(action="/dragon/delete" method="post")
+    .append
+      .signupInfo
+    .error
+      if error
+        !{error}
+    .commandLine
+      label#command.path(for="command")  
+        |~DragonScript/login $&nbsp;
+        input#command.command(type="text", name="command", autocomplete="off", autofocus)
+    input.button(type="submit" value="")
+  script(type="text/javascript", src="/javascripts/text.js")
+  script(type="text/javascript", src="/javascripts/logic.js")
+  script(type="text/javascript", src="/javascripts/delete.js")

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  pre.
+    &nbsp;          { --.\  |            
+    &nbsp;           '-._\\ | (\___    ▄▄ •  ▄▄▄· • ▌ ▄ ·. ▄▄▄ .           ▌ ▐·▄▄▄ .▄▄▄  
+    &nbsp;               `\\|{/ ^ _)- ▐█ ▀ ▪▐█ ▀█ ·██ ▐███▪▀▄.▀·    ▪     ▪█·█▌▀▄.▀·▀▄ █·
+    &nbsp;           .'^^^^^^^  /`    ▄█ ▀█▄▄█▀▀█ ▐█ ▌▐▌▐█·▐▀▀▪▄     ▄█▀▄ ▐█▐█•▐▀▀▪▄▐▀▀▄ 
+    &nbsp;          //\   ) ,  /      ▐█▄▪▐█▐█ ▪▐▌██ ██▌▐█▌▐█▄▄▌    ▐█▌.▐▌ ███ ▐█▄▄▌▐█•█▌
+    &nbsp;    ,  _.'/  `\<-- \<	     ·▀▀▀▀  ▀  ▀ ▀▀  █▪▀▀▀ ▀▀▀      ▀█▄▀▪. ▀   ▀▀▀ .▀  ▀
+    &nbsp;     `^^^`     ^^   ^^
+  form#input-form(action="/game-over" method="post")
+    label#command.path(for="command")  
+      input.command(type="text", name="command", autocomplete="off", autofocus)
