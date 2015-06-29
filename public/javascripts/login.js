@@ -49,7 +49,7 @@ input.addEventListener('blur',function(){
 
 document.querySelector('#input-form').addEventListener('submit', function (e) {
 
-  if (input.value.trim() === "clear") {
+  if (input.value.trim().toLowerCase() === "clear") {
     document.querySelector('.signupInfo').remove();
     var container = document.querySelector('.append');
     var div = document.createElement('div');
@@ -67,7 +67,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "quit") {
+  else if (input.value.trim().toLowerCase() === "quit") {
     window.location.replace("/dragon");
     e.preventDefault();
   }

@@ -36,7 +36,7 @@ input.addEventListener('blur',function(){
 
 document.querySelector('#input-form').addEventListener('submit', function (e) {
 
-  if (input.value.trim() === "clear") {
+  if (input.value.trim().toLowerCase() === "clear") {
     var container = document.getElementsByClassName('dragonInput');
     var max = container.length;
     for (var i = 0; i < max; i++) {
@@ -46,7 +46,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "help") {
+  else if (input.value.trim().toLowerCase() === "help") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     div.className = "dragonInput";
@@ -56,7 +56,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "dragon website") {
+  else if (input.value.trim().toLowerCase() === "dragon website") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     var img = document.createElement('img');
@@ -70,32 +70,32 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "draw sword") {
+  else if (input.value.trim().toLowerCase() === "draw sword") {
     window.location.replace("/dragon/signup");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "play") {
+  else if (input.value.trim().toLowerCase() === "play") {
     window.location.replace("/dragon/game");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "login") {
+  else if (input.value.trim().toLowerCase() === "login") {
     window.location.replace("/dragon/login");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "delete") {
+  else if (input.value.trim().toLowerCase() === "delete") {
     window.location.replace("/dragon/delete");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "quit") {
+  else if (input.value.trim().toLowerCase() === "quit") {
     window.location.replace("/");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "logout") {
+  else if (input.value.trim().toLowerCase() === "logout") {
   }
 
   else {

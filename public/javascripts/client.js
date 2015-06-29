@@ -1,6 +1,14 @@
 var input = document.querySelector('input.command');
 var theme = cookieParser(document.cookie).theme;
 
+var container = document.querySelector('.parent');
+var div = document.createElement('div');
+var p = document.createElement('p');
+div.className = "intro";
+p.innerHTML = "Welcome! Type help to view a list of commands";
+div.appendChild(p);
+container.appendChild(div);
+
 if (theme === "white") {
   input.style.background = theme;
   document.body.style.background = theme;
@@ -48,8 +56,12 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
 
   var input = document.querySelector('input.command');
 
-  if (input.value.trim() === "clear") {
+  if (input.value.trim().toLowerCase() === "clear") {
     var container = document.getElementsByClassName('input');
+    var intro = document.querySelector('.intro');
+    if (intro) {
+      intro.remove();
+    }
     var max = container.length;
     for (var i = 0; i < max; i++) {
       container[0].remove();
@@ -58,7 +70,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "help") {
+  else if (input.value.trim().toLowerCase() === "help") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     div.className = "input";
@@ -68,27 +80,39 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "about") {
-  var container = document.querySelector('.parent');
-  var div = document.createElement('div');
-  div.className = "input";
-  div.innerHTML = about;
-  container.appendChild(div);
-  input.value = "";
-  e.preventDefault();
+  else if (input.value.trim().toLowerCase() === "about") {
+    var container = document.querySelector('.parent');
+    var div = document.createElement('div');
+    var p = document.createElement('p');
+    var img = document.createElement('img');
+    div.className = "input";
+    div.appendChild(img);
+    img.src = "/images/berto_3.png";
+    img.width = "270"
+    img.height = "200"
+    p.innerHTML = about;
+    container.appendChild(div);
+    div.appendChild(p);
+    input.value = "";
+    e.preventDefault();
   }
 
-  else if (input.value.trim() === "dragon") {
+  else if (input.value.trim().toLowerCase() === "dragon") {
     window.location.replace("/dragon");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "github") {
+  else if (input.value.trim().toLowerCase() === "linkedin") {
+    window.location.replace("http://linkedin.com/in/bertoort");
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "github") {
     window.location.replace("http://github.com/bertoort/command");
     e.preventDefault();
   }
 
-  else if (input.value.trim().indexOf("theme ") > -1) {
+  else if (input.value.trim().toLowerCase().indexOf("theme ") > -1) {
 
   }
 

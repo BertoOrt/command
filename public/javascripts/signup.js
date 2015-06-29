@@ -66,7 +66,7 @@ else {
 
 document.querySelector('#input-form').addEventListener('submit', function (e) {
 
-  if (input.value.trim() === "clear" && place === 0) {
+  if (input.value.trim().toLowerCase() === "clear" && place === 0) {
     var container = document.getElementsByClassName('signup');
     var max = container.length;
     for (var i = 0; i < max; i++) {
@@ -76,12 +76,12 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "quit") {
+  else if (input.value.trim().toLowerCase() === "quit") {
     window.location.replace("/dragon");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "help" && place === 0) {
+  else if (input.value.trim().toLowerCase() === "help" && place === 0) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
@@ -91,7 +91,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "a" && place === 0) {
+  else if (input.value.trim().toLowerCase() === "a" && place === 0) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
@@ -101,7 +101,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "b" && place === 0) {
+  else if (input.value.trim().toLowerCase() === "b" && place === 0) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
@@ -111,7 +111,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "c" && place === 0) {
+  else if (input.value.trim().toLowerCase() === "c" && place === 0) {
     document.querySelector('.prompt').remove();
     var container = document.querySelector('.parent');
     var pre = document.createElement('pre');
@@ -130,7 +130,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "clear" && place > 0) {
+  else if (input.value.trim().toLowerCase() === "clear" && place > 0) {
     document.querySelector('.signupInfo').remove();
     var container = document.querySelector('.append');
     var div = document.createElement('div');
@@ -173,7 +173,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     pre.innerHTML = "\n" + "What's your password?" + "\n" + "\n" + "(enter clear to change name)";
     name.setAttribute('id', 'name');
     name.name = "name";
-    name.value = input.value.trim();
+    name.value = input.value.trim().toLowerCase();
     if (theme) {
       if (theme === "hacker") {
         name.style.background = "black";

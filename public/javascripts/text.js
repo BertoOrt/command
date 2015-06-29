@@ -1,4 +1,4 @@
-var help = ["The most commonly used commands are:", "clear", "clear screen", "theme [color]", "change background color", "about", "display information about me!", "github", "checkout the repository", "dragon", "start dragon quest",
+var help = ["The most commonly used commands are:", "clear", "clear screen", "theme [color]", "change background color", "about", "display information about me!", "github", "checkout the repository", "linkedin", "go to my linkedin profile", "dragon", "start dragon quest",
           ];
 
 var dragonHelp = ["The most commonly used commands are:", "draw sword", "sign up to play the game!", "clear", "clear screen", "quit", "exit to home page", "login", "log into your game", "play", "jump into the game if already logged in", "logout", "log out of the game", "delete", "delete your account", "restart", "resets the game (in game)", "back", "goes back to the last question, down to the first (in game)",

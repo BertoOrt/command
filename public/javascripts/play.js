@@ -57,7 +57,7 @@ input.addEventListener('blur',function(){
 
 document.querySelector('#input-form').addEventListener('submit', function (e) {
 
-  if (input.value.trim() === "clear") {
+  if (input.value.trim().toLowerCase() === "clear") {
     var container = document.getElementsByClassName('dragonQuotes');
     var max = container.length;
     for (var i = 0; i < max; i++) {
@@ -67,7 +67,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "help") {
+  else if (input.value.trim().toLowerCase() === "help") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     div.className = "dragonQuotes";
@@ -77,12 +77,12 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "quit") {
+  else if (input.value.trim().toLowerCase() === "quit") {
     window.location.replace("/dragon");
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "dragon website") {
+  else if (input.value.trim().toLowerCase() === "dragon website") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     var img = document.createElement('img');
@@ -96,34 +96,34 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim() === "restart") {
+  else if (input.value.trim().toLowerCase() === "restart") {
 
   }
 
-  else if (input.value.trim() === "back") {
+  else if (input.value.trim().toLowerCase() === "back") {
 
   }
 
-  else if (input.value.trim() === "logout") {
+  else if (input.value.trim().toLowerCase() === "logout") {
 
   }
 
-  else if (level === 0 && input.value.trim() === "0") {
+  else if (level === 0 && input.value.trim().toLowerCase() === "0") {
     var answer = document.querySelector('.answer');
     answer.value = "correct";
   }
 
-  else if (level === 1 && input.value.trim() === "['fizz']") {
+  else if (level === 1 && input.value.trim().toLowerCase() === "['fizz']") {
     var answer = document.querySelector('.answer');
     answer.value = "correct";
   }
 
-  else if (level === 2 && input.value.trim() === "undefined") {
+  else if (level === 2 && input.value.trim().toLowerCase() === "undefined") {
     var answer = document.querySelector('.answer');
     answer.value = "correct";
   }
 
-  else if (level === 3 && input.value.trim() === "'salt, human eyes, salt'") {
+  else if (level === 3 && input.value.trim().toLowerCase() === "'salt, human eyes, salt'") {
     var answer = document.querySelector('.answer');
     answer.value = "correct";
   }
