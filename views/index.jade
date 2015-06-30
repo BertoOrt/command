@@ -2,7 +2,11 @@ extends layout
 
 block content
   .ballon
-  .parent    
+  .parent
+  if subreddit
+    .subreddit
+      for title in subreddit
+        p= title.data.title
   form#input-form(action="/" method="post")
     label#command.path(for="command")  
       |$&nbsp;

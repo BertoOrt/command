@@ -4,6 +4,7 @@ var db = require('monk')(process.env.MONGOLAB_URI);
 var dragonScript = db.get('users');
 var bcrypt = require('bcryptjs');
 var quotes = require('../public/javascripts/server.js');
+var unirest = require('unirest');
 
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -72,6 +73,14 @@ router.post('/', function (req, res, next) {
     var color = req.body.command.toLowerCase().replace('theme ', "");
     res.cookie('theme', color);
     res.redirect('/');
+  }
+  else if (req.body.command.indexOf('top r ') > -1) {
+    var subreddit = req.body.command.toLowerCase().replace('top r ', "");
+    unirest.get('https://www.reddit.com/r/' + subreddit + '/.json')
+    .end(function (response) {
+      console.log(response.body.data.children[0].title);
+      res.render('index', {subreddit: response.body.data.children});
+    });
   }
 })
 

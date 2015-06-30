@@ -116,6 +116,10 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
 
   }
 
+  else if (input.value.trim().toLowerCase().indexOf("top r ") > -1) {
+
+  }
+
   else {
   var container = document.querySelector('.parent');
   var div = document.createElement('div');
