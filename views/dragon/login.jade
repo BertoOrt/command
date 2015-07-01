@@ -1,8 +1,8 @@
-extends layout
+extends ../layout
 
 block content
   .parent
-  form#input-form(action="/dragon/delete" method="post")
+  form#input-form(action="/dragon/login" method="post")
     .append
       .signupInfo
     .error
@@ -15,4 +15,4 @@ block content
     input.button(type="submit" value="")
   script(type="text/javascript", src="/javascripts/text.js")
   script(type="text/javascript", src="/javascripts/logic.js")
-  script(type="text/javascript", src="/javascripts/delete.js")
+  script(type="text/javascript", src="/javascripts/login.js")

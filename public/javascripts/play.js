@@ -1,5 +1,6 @@
 var theme = cookieParser(document.cookie).theme;
 var input = document.querySelector('input.command');
+var finished = cookieParser(document.cookie).finished;
 
 if (theme === "white") {
   input.style.background = theme;
@@ -82,7 +83,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim().toLowerCase() === "dragon website") {
+  else if (level === 4 && input.value.trim().toLowerCase() === "dragon website") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     var img = document.createElement('img');
@@ -108,27 +109,36 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
 
   }
 
-  else if (level === 0 && input.value.trim().toLowerCase() === "0") {
+  else if (level === 0 && input.value.trim().toLowerCase() === "[0,1,2,3,4]") {
     var answer = document.querySelector('.answer');
     answer.value = "correct";
   }
 
-  else if (level === 1 && input.value.trim().toLowerCase() === "['fizz']") {
+  else if (level === 1 && input.value.trim().toLowerCase() === "0") {
     var answer = document.querySelector('.answer');
     answer.value = "correct";
   }
 
-  else if (level === 2 && input.value.trim().toLowerCase() === "undefined") {
-    var answer = document.querySelector('.answer');
-    answer.value = "correct";
+  else if (level === 2) {
+    if (input.value.trim().toLowerCase() === "['fizz']" || input.value.trim().toLowerCase() === '["fizz"]') {
+      var answer = document.querySelector('.answer');
+      answer.value = "correct";
+    }
   }
 
-  else if (level === 3 && input.value.trim().toLowerCase() === "'salt, human eyes, salt'") {
+  else if (level === 3 && input.value.trim().toLowerCase() === "undefined") {
     var answer = document.querySelector('.answer');
     answer.value = "correct";
   }
 
   else if (level === 4) {
+    if (input.value.trim().toLowerCase() === "'salt, human eyes, salt'" || input.value.trim().toLowerCase() === '"salt, human eyes, salt"') {
+      var answer = document.querySelector('.answer');
+      answer.value = "correct";
+    }
+  }
+
+  else if (level === 5) {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     div.className = "dragonQuotes";

@@ -1,5 +1,7 @@
 var input = document.querySelector('input.command');
 var theme = cookieParser(document.cookie).theme;
+var finished = cookieParser(document.cookie).finished;
+
 
 if (theme === "white") {
   input.style.background = theme;
@@ -56,7 +58,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (input.value.trim().toLowerCase() === "dragon website") {
+  else if (finished === "yes" && input.value.trim().toLowerCase() === "dragon website") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     var img = document.createElement('img');

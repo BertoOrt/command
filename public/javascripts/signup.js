@@ -95,7 +95,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
-    div.innerHTML = "Foolish attempt. You barely have enough strength to hold the damn thing.";
+    div.innerHTML = "Foolish attempt. You barely have enough strength to hold the damn thing. Try something else.";
     container.appendChild(div);
     input.value = "";
     e.preventDefault();
@@ -105,7 +105,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     var container = document.querySelector('.prompt');
     var div = document.createElement('div');
     div.className = "signup";
-    div.innerHTML = "You suddenly remember you're stuck in a dungeon. There's nowhere to go.";
+    div.innerHTML = "You suddenly remember you're stuck in a dungeon. There's nowhere to go. Try something else.";
     container.appendChild(div);
     input.value = "";
     e.preventDefault();

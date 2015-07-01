@@ -1,4 +1,4 @@
-extends layout
+extends ../layout
 
 block content
   pre.
@@ -9,6 +9,7 @@ block content
     &nbsp;          //\   ) ,  /      ▐█▄▪▐█▐█ ▪▐▌██ ██▌▐█▌▐█▄▄▌    ▐█▌.▐▌ ███ ▐█▄▄▌▐█•█▌
     &nbsp;    ,  _.'/  `\<-- \<	     ·▀▀▀▀  ▀  ▀ ▀▀  █▪▀▀▀ ▀▀▀      ▀█▄▀▪. ▀   ▀▀▀ .▀  ▀
     &nbsp;     `^^^`     ^^   ^^
+  p.parent Hit Enter to Continue
   form#input-form(action="/game-over" method="post")
     label#command.path(for="command")  
       input.command(type="text", name="command", autocomplete="off", autofocus)
