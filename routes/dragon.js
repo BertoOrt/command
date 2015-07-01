@@ -33,7 +33,7 @@ router.post('/dragon', function (req, res, next) {
     if (req.body.answer === "correct") {
       dragonScript.findOne({username: req.cookies.name}, function (err, data) {
         var level = data.level;
-        if (level < 4) {
+        if (level < 5) {
           dragonScript.update({username: req.cookies.name}, {$set : { level: ++level}});
           res.cookie('lives', 4);
           res.redirect('/dragon/game');
@@ -143,7 +143,7 @@ router.get('/dragon/game', function (req, res, next) {
   }
   else {
     dragonScript.findOne({username: req.cookies.name}, function (err, data) {
-      res.render('dragon/play', {level: data.level, win: data.level === 4 ? true : undefined});
+      res.render('dragon/play', {level: data.level, win: data.level === 5 ? true : undefined});
     })
   }
 })

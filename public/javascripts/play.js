@@ -83,7 +83,7 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
-  else if (level === 4 && input.value.trim().toLowerCase() === "dragon website") {
+  else if (level === 5 && input.value.trim().toLowerCase() === "dragon website") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     var img = document.createElement('img');
