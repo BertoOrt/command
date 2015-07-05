@@ -33,7 +33,7 @@ var welcome = document.querySelector('.welcome');
 var p = document.createElement('p');
 welcome.appendChild(p);
 p.className = "welcome";
-p.innerHTML = "Welcome " + cookieParser(document.cookie).name;
+p.innerHTML = "Welcome " + cookieParser(document.cookie).username;
 
 var level = parseInt(document.querySelector('.invisible').innerHTML);
 var container = document.querySelector('.log');

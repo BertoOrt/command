@@ -103,12 +103,14 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
   }
 
   else if (input.value.trim().toLowerCase() === "linkedin") {
-    window.location.replace("http://linkedin.com/in/bertoort");
+    window.open("http://linkedin.com/in/bertoort");
+    input.value = "";
     e.preventDefault();
   }
 
   else if (input.value.trim().toLowerCase() === "github") {
-    window.location.replace("http://github.com/bertoort/command");
+    window.open("http://github.com/bertoort/command");
+    input.value = "";
     e.preventDefault();
   }
 
