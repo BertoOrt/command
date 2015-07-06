@@ -1,14 +1,19 @@
 # command
 
+###Web Link
 `https://mighty-oasis-1512.herokuapp.com/`
 
-It's simple, a website meant to look like a terminal. I plan to add more commands as I go.
-Feel free to play around and report any bugs you might notice.
+It's simple, a website meant to look like a terminal. Type help to view a list of commands or quit at any moment to go back.
 
 ###DragonScript
 
 Feel savvy with JavaScript? test your knowledge against the mighty dragon.
 Venture into a text-based game where you have to enter the correct answer or the dragon will eat you.
+As always, type help to get a list of commands. You can create an account and save your game.
+
+###Set Up
+
+If you'd like to fork the repo, make sure to run `npm install`
 
 ####Technologies
 
@@ -17,17 +22,6 @@ Venture into a text-based game where you have to enter the correct answer or the
 * cookies
 * mongo
 
-
-####MVP
-
-My goal is to have the game functional meeting the following standards:
-
-* Players can play 5 levels
-* Players can log in and resume their levels
-* Players can log out
-
-####Stretch
-
-If I have time I will add more levels. Add API requests to my command line where you can ask for the weather to help you solve the problems.
+___
 
 ![](/public/images/package.png)
