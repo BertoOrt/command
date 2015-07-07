@@ -1,9 +1,12 @@
 # command
-
-###Web Link
-`https://mighty-oasis-1512.herokuapp.com/`
-
 It's simple, a website meant to look like a terminal. Type help to view a list of commands or quit at any moment to go back.
+
+###Video Introduction
+[![Click to view video introduction](https://i.ytimg.com/vi_webp/xMkXaSYo6c8/mqdefault.webp)](https://youtu.be/xMkXaSYo6c8 "Quick Intro")
+--
+###Web Link
+
+`https://mighty-oasis-1512.herokuapp.com/`
 
 ###DragonScript
 
