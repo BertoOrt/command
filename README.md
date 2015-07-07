@@ -2,7 +2,7 @@
 It's simple, a website meant to look like a terminal. Type help to view a list of commands or quit at any moment to go back.
 
 ###Video Introduction
-[![Click to view video introduction](https://i.ytimg.com/vi_webp/xMkXaSYo6c8/mqdefault.webp)](https://youtu.be/xMkXaSYo6c8 "Quick Intro")
+<iframe width="420" height="315" src="https://www.youtube.com/embed/xMkXaSYo6c8" frameborder="0" allowfullscreen></iframe>
 --
 ###Web Link
 
