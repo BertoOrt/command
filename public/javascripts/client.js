@@ -4,10 +4,15 @@ var theme = cookieParser(document.cookie).theme;
 var container = document.querySelector('.parent');
 var div = document.createElement('div');
 var p = document.createElement('p');
-div.className = "intro";
-p.innerHTML = "Welcome! Type help to view a list of commands";
-div.appendChild(p);
+var img = document.createElement('img');
+div.className = "input";
+div.appendChild(img);
+img.src = "/images/berto_3.png";
+img.width = "270"
+img.height = "200"
+p.innerHTML = about;
 container.appendChild(div);
+div.appendChild(p);
 
 if (theme === "white") {
   input.style.background = theme;

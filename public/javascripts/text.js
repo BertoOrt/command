@@ -27,4 +27,4 @@ var quest = [
       ].join('\n'),
     ];
 
-var about = "Hello, my name is Roberto Ortega. I'm a student at Galvanize Full Stack Course<br><br> This is my terminal website. Check out the repository or find me on linkedIn.<br> Play around, type help for the list of commands, and have fun!"
+var about = "Hello, my name is Roberto Ortega. I'm a full-stack developer.<br><br> This is my terminal website. Type help to view a list of commands.<br>You can learn more about me, check out my portfolio, find me on linkedIn, and much more!<br> Play around, you can contact me at berto.ort@gmail.com."
