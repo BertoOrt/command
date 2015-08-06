@@ -17,6 +17,18 @@ input {
   width: 80%;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
 .button {
   width: 0.1px;
   height: 0.1px;

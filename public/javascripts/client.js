@@ -85,25 +85,69 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
+  else if (input.value.trim().toLowerCase() === "portfolio") {
+    var container = document.querySelector('.parent');
+    var div = document.createElement('div');
+    var p = document.createElement('p');
+    var ul = document.createElement('ul');
+    div.appendChild(p);
+    div.appendChild(ul);
+    p.innerHTML = portfolioIntro;
+    div.className = "input";
+    portfolio.forEach(function (project) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = project.url;
+      a.innerHTML = project.name;
+      li.appendChild(a);
+      div.appendChild(li);
+    })
+    container.appendChild(div);
+    input.value = "";
+    e.preventDefault();
+  }
+
   else if (input.value.trim().toLowerCase() === "about") {
     var container = document.querySelector('.parent');
     var div = document.createElement('div');
     var p = document.createElement('p');
+    var p2 = document.createElement('p');
+    var p3 = document.createElement('p');
     var img = document.createElement('img');
+    var img2 = document.createElement('img');
+    var img3 = document.createElement('img');
     div.className = "input";
-    div.appendChild(img);
-    img.src = "/images/berto_3.png";
-    img.width = "270"
-    img.height = "200"
-    p.innerHTML = about;
-    container.appendChild(div);
     div.appendChild(p);
+    div.appendChild(img);
+    div.appendChild(p2);
+    div.appendChild(img2);
+    div.appendChild(p3);
+    div.appendChild(img3);
+    img.src = "/images/colombia.png";
+    img2.src = "/images/climbing.png";
+    img3.src = "/images/iago.png";
+    img.width = "270";
+    img.height = "200";
+    img2.width = "270";
+    img2.height = "350";
+    img3.width = "270";
+    img3.height = "200";
+    p.innerHTML = parOne;
+    p2.innerHTML = parTwo;
+    p3.innerHTML = parThree;
+    container.appendChild(div);
     input.value = "";
     e.preventDefault();
   }
 
   else if (input.value.trim().toLowerCase() === "dragon") {
     window.location.replace("/dragon");
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "war") {
+    window.open("http://war.bertoort.com");
+    input.value = "";
     e.preventDefault();
   }
 

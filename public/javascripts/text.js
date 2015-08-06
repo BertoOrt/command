@@ -1,4 +1,4 @@
-var help = ["The most commonly used commands are:", "clear", "clear screen", "theme [color]", "change background color", "about", "display information about me!", "github", "checkout the repository", "linkedin", "go to my linkedin profile", "dragon", "start dragon quest",
+var help = ["The most commonly used commands are:", 'portfolio', 'shows a list of projects', "github", "checkout the repository", "linkedin", "go to my linkedin profile",  "theme [color]", "change background color", "dragon", "start dragon quest", "clear", "clear screen", "about", "display information about me!",
           ];
 
 var dragonHelp = ["The most commonly used commands are:", "draw sword", "sign up to play the game!", "clear", "clear screen", "quit", "exit to home page", "login", "log into your game", "play", "jump into the game if already logged in", "logout", "log out of the game", "delete", "delete your account", "restart", "resets the game (in game)", "back", "goes back to the last question, down to the first (in game)",
@@ -27,4 +27,11 @@ var quest = [
       ].join('\n'),
     ];
 
-var about = "Hello, my name is Roberto Ortega. I'm a full-stack developer.<br><br> This is my terminal website. Type help to view a list of commands.<br>You can learn more about me, check out my portfolio, find me on linkedIn, and much more!<br> Play around, you can contact me at berto.ort@gmail.com."
+var about = "Hello, my name is Roberto Ortega. I'm a full-stack developer.<br><br> This is my terminal website. Type help to view a list of commands.<br>You can learn more about me, check out my portfolio, find me on linkedIn, and much more!<br> Play around, you can contact me at berto.ort@gmail.com.";
+
+var parOne = "Born in Venezuela, my life has been full of travels and challenges.<br> I love solving problems and exploring new territory. Here is me deep in the forests of Colombia:<br>";
+var parTwo = "I also enjoy climbing, chess, snowboarding, biking, video games, and much more!";
+var parThree = "and who am I without my most loyal companion: Iago.";
+
+var portfolioIntro = 'click on the projects or type their names to open';
+var portfolio = [ {name: 'war', url: 'http://war.bertoort.com'}, {name: 'squirrel', url: 'http://squirrel.bertoort.com'}, {name: 'beats N eats', url: 'http://beatsneats.bertoort.com'}]
