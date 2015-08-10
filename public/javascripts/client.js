@@ -151,6 +151,30 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
+  else if (input.value.trim().toLowerCase() === "bookmarks") {
+    window.open("https://pure-badlands-3828.herokuapp.com/");
+    input.value = "";
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "kwlh") {
+    window.open("https://agile-anchorage-3739.herokuapp.com/");
+    input.value = "";
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "squirrel") {
+    window.open("https://pure-fjord-4882.herokuapp.com/");
+    input.value = "";
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "beatsneats") {
+    window.open("http://glacial-shelf-9429.herokuapp.com/");
+    input.value = "";
+    e.preventDefault();
+  }
+
   else if (input.value.trim().toLowerCase() === "linkedin") {
     window.open("http://linkedin.com/in/bertoort");
     input.value = "";
