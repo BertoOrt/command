@@ -34,4 +34,4 @@ var parTwo = "I also enjoy climbing, chess, snowboarding, biking, video games, a
 var parThree = "and who am I without my most loyal companion: Iago.";
 
 var portfolioIntro = 'click on the projects or type their names to open';
-var portfolio = [ {name: 'war', url: 'http://war.bertoort.com'}, {name: 'squirrel', url: 'http://squirrel.bertoort.com'}, {name: 'beats N eats', url: 'http://beatsneats.bertoort.com'}]
+var portfolio = [ {name: 'war', url: 'http://war.bertoort.com'}, {name: 'bookmarks', url: 'https://pure-badlands-3828.herokuapp.com/'} {name: 'kwlh', url:'https://agile-anchorage-3739.herokuapp.com/'} {name: 'squirrel', url: 'https://pure-fjord-4882.herokuapp.com/'}, {name: 'beats N eats', url: 'http://glacial-shelf-9429.herokuapp.com/'}]
