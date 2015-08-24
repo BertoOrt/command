@@ -27,7 +27,7 @@ var quest = [
       ].join('\n'),
     ];
 
-var about = "Hello, my name is Roberto Ortega. I'm a full-stack developer.<br><br> This is my terminal website. Type help to view a list of commands.<br>You can learn more about me, check out my portfolio, find me on linkedIn, and much more!<br> Play around, you can contact me at berto.ort@gmail.com.";
+var about = "Welcome! type help to view a list of commands.";
 
 var parOne = "Born in Venezuela, my life has been full of travels and challenges.<br> I love solving problems and exploring new territory. Here is me deep in the forests of Colombia:<br>";
 var parTwo = "I also enjoy climbing, chess, snowboarding, biking, video games, and much more!";
