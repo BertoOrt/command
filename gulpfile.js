@@ -5,21 +5,21 @@ var minifyCSS = require('gulp-minify-css');
 var rename = require('gulp-rename');
 
 gulp.task('js', function () {
-  return gulp.src('assets/javascripts/*.js')
+  return gulp.src('assets/javascripts/*js')
     .pipe(uglify())
-    .pipe(gulp.dest('build/javascripts'))
+    .pipe(gulp.dest('dist/javascripts'))
 })
 
 gulp.task('css', function () {
   return gulp.src('assets/stylesheets/*css')
     .pipe(minifyCSS())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('public/css'))
 })
 
 gulp.task('images', function () {
   return gulp.src('assets/images/*')
-    .pipe(gulp.dest('build/images'))
+    .pipe(gulp.dest('public/images'))
 })
 
 gulp.task('watchout', function () {
