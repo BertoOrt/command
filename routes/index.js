@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require('monk')(process.env.MONGOLAB_URI);
 var dragonScript = db.get('users');
 var bcrypt = require('bcryptjs');
-var quotes = require('../public/javascripts/server.js');
+var quotes = require('../assets/javascripts/server.js');
 
 router.get('/', function(req, res, next) {
   res.render('index');
