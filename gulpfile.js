@@ -7,7 +7,7 @@ var rename = require('gulp-rename');
 gulp.task('js', function () {
   return gulp.src('assets/javascripts/*js')
     .pipe(uglify())
-    .pipe(gulp.dest('dist/javascripts'))
+    .pipe(gulp.dest('public/javascripts'))
 })
 
 gulp.task('css', function () {

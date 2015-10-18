@@ -150,6 +150,30 @@ document.querySelector('#input-form').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 
+  else if (input.value.trim().toLowerCase() === "local-llamas") {
+    window.open("https://arcane-castle-8723.herokuapp.com/");
+    window.location = "http://development.llama-local.divshot.io/"
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "road-trip") {
+    window.open("https://intense-coast-9597.herokuapp.com/");
+    input.value = "";
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "geopardy") {
+    window.open("http://development.geopardy.divshot.io/#/");
+    input.value = "";
+    e.preventDefault();
+  }
+
+  else if (input.value.trim().toLowerCase() === "twitch-streams") {
+    window.open("https://infinite-woodland-7702.herokuapp.com/");
+    input.value = "";
+    e.preventDefault();
+  }
+
   else if (input.value.trim().toLowerCase() === "kwlh") {
     window.open("https://agile-anchorage-3739.herokuapp.com/");
     input.value = "";
